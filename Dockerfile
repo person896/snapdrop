@@ -11,9 +11,9 @@ RUN cd /
 RUN cd /snapdrop
 RUN npm install -g gulp bower
 RUN npm install && bower install --allow-root
-RUN gulp serve
-RUN node index.js
 
 EXPOSE 3002
 
 WORKDIR /snapdrop
+
+CMD [ "bash", "start.sh" ]
