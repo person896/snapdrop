@@ -10,7 +10,7 @@ RUN cd /
 
 RUN cd /snapdrop
 RUN npm install -g gulp bower
-RUN npm install && bower install --root-allowed
+RUN npm install && bower install --allow-root
 RUN gulp serve
 RUN node index.js
 
