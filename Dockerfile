@@ -5,7 +5,7 @@ RUN yum install -y git \
 && yum install -y nodejs
 
 RUN cd / \
-&& git clone https://github.com/RobinLinus/snapdrop.git
+&& git clone https://github.com/person896/snapdrop.git
 
 RUN cd /snapdrop && npm install -g gulp bower
 RUN cd /snapdrop && npm install && bower install --allow-root
