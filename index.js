@@ -6,7 +6,7 @@ var cors = require('cors');
 var http = require('http');
 var fs = require("fs");
 var ExpressPeerServer = require('peer').ExpressPeerServer;
-var wsServer = require('./server/ws-server.js');
+var wsServer = require('/snapdrop/server/ws-server.js');
 
 var options = {
   key:fs.readFileSync('/etc/ssl/server.key;'),
