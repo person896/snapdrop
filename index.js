@@ -3,10 +3,10 @@ var express = require('express');
 var compression = require('compression');
 var app = express();
 var cors = require('cors');
-var https = require('https');
+var http = require('http');
 var fs = require("fs");
 var ExpressPeerServer = require('peer').ExpressPeerServer;
-var wsServer = require('./ws-server.js');
+var wsServer = require('./server/ws-server.js');
 
 var options = {
   key:fs.readFileSync('/etc/ssl/server.key;'),
