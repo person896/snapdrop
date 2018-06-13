@@ -6,7 +6,7 @@ var cors = require('cors');
 var http = require('http');
 var fs = require("fs");
 var ExpressPeerServer = require('peer').ExpressPeerServer;
-var wsServer = require('/snapdrop/server/ws-server.js');
+var wsServer = require('./server/ws-server.js');
 
 var options = {
   key:fs.readFileSync('/etc/ssl/server.key;'),
@@ -20,7 +20,7 @@ app.use(cors())
 app.use(compression());
 app.use(express.static(__dirname + '/public'));
 
-var port = process.env.PORT || 3010;
+var port = process.env.PORT || 3002;
 server.listen(port);
 wsServer.create(server);
 app.use('/peerjs', ExpressPeerServer(server, {
