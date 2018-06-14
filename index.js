@@ -9,8 +9,8 @@ var ExpressPeerServer = require('peer').ExpressPeerServer;
 var wsServer = require('./server/ws-server.js');
 
 var options = {
-  key:fs.readFileSync('/etc/ssl/server.key;'),
-  cert:fs.readFileSync('/etc/ssl/certificate.crt;')
+  key:fs.readFileSync('./etc/ssl/server.key;'),
+  cert:fs.readFileSync('./etc/ssl/certificate.crt;')
 };
 
 var server = https.createServer(options,app);
